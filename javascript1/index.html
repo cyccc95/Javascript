@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <!-- 기본 -->
+  <!-- <h1 id="hello">안녕하세요</h1>
+  <h1 id="hi">JS 초보에요</h1> -->
+
+  <!-- Alert 박스 -->
+  <div class="alert-box" id="alert">
+    <p id="alert-text">아이디 입력하세요</p>
+    <button id="close">닫기</button>
+  </div>
+  <button onclick="textAlert('아이디 입력하세요')">버튼1</button>
+  <button onclick="textAlert('비밀번호 입력하세요')">버튼2</button>
+
+
+  <script>
+    // 기본
+    // document.getElementById('hello').innerHTML = '안녕';
+    // document.getElementById('hello').style.color = 'red';
+    // document.getElementById('hi').style.fontSize = '16px';
+
+    // Alert 박스
+    // function displayAlert(display){
+    //   document.getElementById('alert').style.display = display;
+    // }
+    
+    document.getElementById('close').addEventListener('click', function(){
+      document.getElementById('alert').style.display = 'none';
+    });
+
+    function textAlert(text){
+      document.getElementById('alert').style.display = 'block';
+      document.getElementById('alert-text').innerText = text;
+    }
+    
+    
+    
+  </script>
+</body>
+</html>
