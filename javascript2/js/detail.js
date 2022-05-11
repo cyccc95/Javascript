@@ -1,11 +1,11 @@
-for(let i =0 ; i < 3 ; i++) {
-  document.querySelectorAll('.tab-button')[i].addEventListener('click', function() {
-    removeOrange();
-    addOrange(i);
-    removeShow()
-    addShow(i)
-  })
-}
+// for(let i =0 ; i < 3 ; i++) {
+//   document.querySelectorAll('.tab-button')[i].addEventListener('click', function() {
+//     removeOrange();
+//     addOrange(i);
+//     removeShow();
+//     addShow(i);
+//   })
+// }
 
 function removeOrange(){
   document.querySelectorAll('.tab-button')[0].classList.remove('orange');
@@ -23,3 +23,21 @@ function addOrange(i){
 function addShow(i){
   document.querySelectorAll('.tab-content')[i].classList.add('show');
 }
+function openTab(i){
+  removeOrange();
+  removeShow();
+  addOrange(i);
+  addShow(i);
+}
+document.querySelector('.list').addEventListener('click', function(e){
+  // if(e.target == document.querySelectorAll('.tab-button')[0]){
+  //   openTab(0);
+  // }
+  // if(e.target == document.querySelectorAll('.tab-button')[1]){
+  //   openTab(1);
+  // }
+  // if(e.target == document.querySelectorAll('.tab-button')[2]){
+  //   openTab(2);
+  // }
+  openTab(e.target.dataset.id);
+})
