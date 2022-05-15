@@ -41,3 +41,16 @@ document.querySelector('.list').addEventListener('click', function(e){
   // }
   openTab(e.target.dataset.id);
 })
+
+// Array와 Object 자료형
+let car = ['소나타', 50000, 'white'];
+car[0] = '아반떼';
+console.log(car);
+
+let car2 = {name : '소나타', price : [50000, 3000, 4000]}; // key : value 형태로 저장
+console.log(car2);
+console.log(car2['name']);
+console.log(car2.name);
+
+document.querySelector('.car-title').innerHTML = car2.name;
+document.querySelector('.car-price').innerHTML = car2.price[0];
