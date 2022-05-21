@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/scroll.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="card-background">
+    <div class="card-box">
+      <img src="image/card1.png">
+    </div>
+    <div class="card-box">
+      <img src="image/card2.png">
+    </div>
+    <div class="card-box">
+      <img src="image/card3.png">
+    </div>
+  </div>
+
+  <script>
+
+    $(window).scroll(function(){
+      let 높이 = $(window).scrollTop();
+      console.log(높이);
+      
+      let y1 = (-1/500) * 높이 + 115/50;
+      $('.card-box').eq(0).css('opacity', y1);
+
+      let y2 = (-1/500) * 높이 + 195/50;
+      $('.card-box').eq(1).css('opacity', y2);
+
+      let z1 = (-1/5000) * 높이 + 565/500;
+      $('.card-box').eq(0).css('transform', `scale(${z1})`);
+
+      let z2 = (-1/5000) * 높이 + 645/500;
+      $('.card-box').eq(1).css('transform', `scale(${z2})`);
+    });
+
+    
+  </script>
+</body>
+</html>
